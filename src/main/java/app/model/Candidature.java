@@ -39,4 +39,9 @@ public class Candidature {
     public void ajouterDocument(DocumentFile doc) {
         documents.add(doc);
     }
+
+    public void setDocuments(List<DocumentFile> documents) {
+        this.documents = documents;
+    }
+
 }

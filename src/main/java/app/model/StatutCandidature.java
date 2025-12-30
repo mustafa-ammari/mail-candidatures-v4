@@ -1,8 +1,6 @@
 package app.model;
 
-import lombok.Getter;
 
-@Getter
 public enum StatutCandidature {
 
     TOUTES("Toutes"),
@@ -10,6 +8,9 @@ public enum StatutCandidature {
     REFUS("Non retenu"),
     ENTRETIEN("Entretien");
 
+    public String getLabel() {
+        return label;
+    }
 
     private final String label;
 

@@ -7,13 +7,11 @@ import app.service.FileSystemService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TableView;
-import lombok.Getter;
 
 import java.util.Comparator;
 
 public class MainController {
 
-    @Getter
     private final ObservableList<Candidature> candidatures;
     private final CandidatureRepository repository = new CandidatureRepository();
 
@@ -36,6 +34,10 @@ public class MainController {
 
         sort();
         table.setItems(candidatures);
+    }
+
+    public ObservableList<Candidature> getCandidatures() {
+        return candidatures;
     }
 
     public void add(Candidature c) {

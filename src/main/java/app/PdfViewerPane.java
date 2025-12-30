@@ -11,7 +11,6 @@ import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
-import lombok.Getter;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.rendering.PDFRenderer;
 
@@ -32,7 +31,10 @@ public class PdfViewerPane extends BorderPane {
 
     private final ImageView imageView = new ImageView();
 
-    @Getter
+    public ListView<DocumentFile> getPdfListView() {
+        return pdfListView;
+    }
+
     private final ListView<DocumentFile> pdfListView = new ListView<>();
 
     private int currentPage = 0;
